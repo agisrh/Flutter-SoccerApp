@@ -11,7 +11,7 @@ class HightlightCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 230,
+      width: 235,
       decoration: BoxDecoration(
         color: AppTheme.color.neutral.shade100,
         borderRadius: const BorderRadius.all(
