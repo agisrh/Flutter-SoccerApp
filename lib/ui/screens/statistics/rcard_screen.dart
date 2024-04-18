@@ -17,7 +17,10 @@ class RcardScreen extends StatelessWidget {
           margin: EdgeInsets.only(top: 10.h),
           child: Obx(
             () => controller.isLoading.value
-                ? const Center(child: CircularProgressIndicator())
+                ? Center(
+                    child: CircularProgressIndicator(
+                    color: AppTheme.color.primary,
+                  ))
                 : ListView.builder(
                     physics: const BouncingScrollPhysics(),
                     padding: EdgeInsets.symmetric(horizontal: 10.w),

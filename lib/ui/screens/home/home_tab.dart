@@ -41,6 +41,7 @@ class HomeTab extends StatelessWidget {
                 SizedBox(
                   height: 150,
                   child: Container(
+                    padding: const EdgeInsets.only(top: 20),
                     margin: const EdgeInsets.all(25.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -51,7 +52,7 @@ class HomeTab extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'BRI Liga 1',
+                              'Ball Area',
                               style: Get.textTheme.titleLarge?.copyWith(
                                 fontWeight: FontWeight.bold,
                                 letterSpacing: 1,
@@ -60,7 +61,7 @@ class HomeTab extends StatelessWidget {
                             ),
                             SizedBox(height: 3.h),
                             Text(
-                              'Soccer App',
+                              'Soccer Insight',
                               style: Get.textTheme.bodyMedium?.copyWith(
                                 letterSpacing: 1,
                                 color: AppTheme.color.neutral.shade100,
@@ -68,7 +69,7 @@ class HomeTab extends StatelessWidget {
                             )
                           ],
                         ),
-                        Assets.images.briLiga1.image(color: Colors.white)
+                        Assets.images.logo.image(color: Colors.white)
                       ],
                     ),
                   ),
@@ -96,8 +97,9 @@ class HomeTab extends StatelessWidget {
                       const SizedBox(height: 5),
                       Obx(
                         () => controller.isLoading.value
-                            ? const Center(
+                            ? Center(
                                 child: CircularProgressIndicator(
+                                color: AppTheme.color.primary,
                                 semanticsLabel: "Loading data...",
                               ))
                             : Expanded(

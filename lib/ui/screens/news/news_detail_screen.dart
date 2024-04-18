@@ -104,7 +104,10 @@ class _NewsDetailScreenState extends State<NewsDetailScreen> {
         color: AppTheme.color.primary,
       ),
       body: isLoading
-          ? const Center(child: CircularProgressIndicator())
+          ? Center(
+              child: CircularProgressIndicator(
+              color: AppTheme.color.primary,
+            ))
           : WebViewWidget(controller: controller),
     );
   }

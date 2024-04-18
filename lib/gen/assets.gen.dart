@@ -42,6 +42,9 @@ class $AssetsImagesGen {
   /// File path: assets/images/arema.png
   AssetGenImage get arema => const AssetGenImage('assets/images/arema.png');
 
+  /// File path: assets/images/avatar.png
+  AssetGenImage get avatar => const AssetGenImage('assets/images/avatar.png');
+
   /// File path: assets/images/bali.png
   AssetGenImage get bali => const AssetGenImage('assets/images/bali.png');
 
@@ -59,12 +62,23 @@ class $AssetsImagesGen {
   AssetGenImage get briLiga1 =>
       const AssetGenImage('assets/images/bri_liga_1.png');
 
+  /// File path: assets/images/david_da_silva.png
+  AssetGenImage get davidDaSilva =>
+      const AssetGenImage('assets/images/david_da_silva.png');
+
   /// File path: assets/images/dewa.png
   AssetGenImage get dewa => const AssetGenImage('assets/images/dewa.png');
 
   /// File path: assets/images/indosiar.png
   AssetGenImage get indosiar =>
       const AssetGenImage('assets/images/indosiar.png');
+
+  /// File path: assets/images/logo-white.png
+  AssetGenImage get logoWhite =>
+      const AssetGenImage('assets/images/logo-white.png');
+
+  /// File path: assets/images/logo.png
+  AssetGenImage get logo => const AssetGenImage('assets/images/logo.png');
 
   /// File path: assets/images/madura.png
   AssetGenImage get madura => const AssetGenImage('assets/images/madura.png');
@@ -92,11 +106,17 @@ class $AssetsImagesGen {
   /// File path: assets/images/persis.png
   AssetGenImage get persis => const AssetGenImage('assets/images/persis.png');
 
+  /// File path: assets/images/persita.png
+  AssetGenImage get persita => const AssetGenImage('assets/images/persita.png');
+
   /// File path: assets/images/psis.png
   AssetGenImage get psis => const AssetGenImage('assets/images/psis.png');
 
   /// File path: assets/images/psm.png
   AssetGenImage get psm => const AssetGenImage('assets/images/psm.png');
+
+  /// File path: assets/images/pss.png
+  AssetGenImage get pss => const AssetGenImage('assets/images/pss.png');
 
   /// File path: assets/images/rans.png
   AssetGenImage get rans => const AssetGenImage('assets/images/rans.png');
@@ -107,13 +127,17 @@ class $AssetsImagesGen {
   /// List of all assets
   List<AssetGenImage> get values => [
         arema,
+        avatar,
         bali,
         barito,
         bhayangkara,
         borneo,
         briLiga1,
+        davidDaSilva,
         dewa,
         indosiar,
+        logoWhite,
+        logo,
         madura,
         moji,
         persebaya,
@@ -122,8 +146,10 @@ class $AssetsImagesGen {
         persik,
         persikabo,
         persis,
+        persita,
         psis,
         psm,
+        pss,
         rans,
         vidio
       ];
@@ -194,7 +220,16 @@ class AssetGenImage {
     );
   }
 
-  ImageProvider provider() => AssetImage(_assetName);
+  ImageProvider provider({
+    AssetBundle? bundle,
+    String? package,
+  }) {
+    return AssetImage(
+      _assetName,
+      bundle: bundle,
+      package: package,
+    );
+  }
 
   String get path => _assetName;
 

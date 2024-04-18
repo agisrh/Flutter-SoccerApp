@@ -3,6 +3,7 @@ import 'package:soccerapp/ui/screens/statistics/assits_screen.dart';
 import 'package:soccerapp/ui/screens/statistics/goal_screen.dart';
 import 'package:soccerapp/ui/screens/statistics/rcard_screen.dart';
 import 'package:soccerapp/ui/screens/statistics/ycard_screen.dart';
+import 'package:soccerapp/ui/theme/utils/app_theme.dart';
 
 class StatisticsScreen extends StatelessWidget {
   const StatisticsScreen({super.key});
@@ -15,13 +16,15 @@ class StatisticsScreen extends StatelessWidget {
           body: NestedScrollView(
         headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
           return <Widget>[
-            const SliverAppBar(
-              title: Text('Statistics'),
+            SliverAppBar(
+              title: const Text('Statistics'),
               pinned: true,
               floating: true,
               bottom: TabBar(
+                indicatorColor: AppTheme.color.primary,
+                labelColor: AppTheme.color.primary,
                 isScrollable: true,
-                tabs: [
+                tabs: const [
                   Tab(child: Text('Goal')),
                   Tab(child: Text('Assist')),
                   Tab(child: Text('Yellow Card')),
