@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:soccerapp/core/controllers/goal_controller.dart';
-import 'package:soccerapp/core/models/data/goal_data.dart';
+import 'package:soccerapp/core/controllers/rcard_controller.dart';
+import 'package:soccerapp/core/models/data/asist_data.dart';
 import 'package:soccerapp/ui/theme/app_theme.dart';
 
-class GoalScreen extends StatelessWidget {
-  const GoalScreen({super.key});
+class RcardScreen extends StatelessWidget {
+  const RcardScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<GoalController>(
-      init: Get.put(GoalController()),
+    return GetBuilder<RCardController>(
+      init: Get.put(RCardController()),
       builder: (controller) {
         return Container(
           margin: EdgeInsets.only(top: 10.h),
@@ -23,7 +23,7 @@ class GoalScreen extends StatelessWidget {
                     padding: EdgeInsets.symmetric(horizontal: 10.w),
                     itemCount: controller.datalist.length,
                     itemBuilder: (BuildContext context, int index) {
-                      GoalData goal = controller.datalist[index];
+                      AssistData goal = controller.datalist[index];
                       return Column(
                         children: [
                           Row(
@@ -41,9 +41,8 @@ class GoalScreen extends StatelessWidget {
                                                 BorderRadius.circular(100),
                                             child: Image.network(
                                               goal.avatar,
-                                              width: 40,
                                               height: 40,
-                                              fit: BoxFit.cover,
+                                              width: 40,
                                             ),
                                           )
                                         : CircleAvatar(
@@ -67,10 +66,11 @@ class GoalScreen extends StatelessWidget {
                                           ),
                                           SizedBox(width: 5.w),
                                           // Text(
-                                          //   goal.club,
+                                          //   goal.clubl,
                                           //   style: TextStyle(
                                           //     fontSize: 12.sp,
-                                          //     color: AppTheme.color.neutral.shade600,
+                                          //     color: AppTheme
+                                          //         .color.neutral.shade600,
                                           //   ),
                                           // )
                                         ],
@@ -82,7 +82,7 @@ class GoalScreen extends StatelessWidget {
                               Padding(
                                 padding: const EdgeInsets.only(right: 15.0),
                                 child: Text(
-                                  goal.goals,
+                                  goal.total,
                                   style: TextStyle(
                                     fontSize: 14.sp,
                                     color: AppTheme.color.primary,

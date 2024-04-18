@@ -43,7 +43,9 @@ class TextLabel extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {
-                    link!();
+                    if (link != null) {
+                      link!();
+                    }
                   },
                   child: Text(
                     seeText,

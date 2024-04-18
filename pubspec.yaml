@@ -13,9 +13,16 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_screenutil: ^5.5.3+2
   get: ^4.6.5
-  google_fonts: 2.2.0
+  google_fonts: 6.1.0
   iconsax: ^0.0.8
   flutter_carousel_slider: ^1.1.0
+
+  webview_flutter: ^4.5.0
+  dio: ^5.3.2
+
+  flutter_launcher_icons: ^0.13.1
+  flutter_native_splash: ^2.3.7
+
 
 dev_dependencies:
   flutter_test:
@@ -33,3 +40,24 @@ flutter:
     - assets/icons/
     - assets/images/
 
+# flutter_launcher_icons:
+  # android: "launcher_icon"
+  # ios: true
+  # image_path: "assets/images/ballarea.png"
+  # min_sdk_android: 21 # android min sdk min:16, default 21
+
+# flutter_native_splash:
+  # color: "#ffffff"
+  # image: assets/images/ballarea-tl.png
+  # branding: assets/images/ballarea-tl.png
+  # color_dark: "#FFFFFF"
+  # image_dark: assets/images/ballarea-tl.png
+  # branding_dark: assets/images/ballarea-tl.png
+
+  # android_12:
+    # image: assets/images/ballarea-tl.png
+    # icon_background_color: "#ffffff"
+    # image_dark: assets/images/ballarea-tl.png
+    # icon_background_color_dark: "#FFFFFF"
+
+  # web: false

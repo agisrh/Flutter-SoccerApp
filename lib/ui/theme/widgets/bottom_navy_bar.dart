@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 library bottom_navy_bar;
 
 import 'package:flutter/material.dart';
