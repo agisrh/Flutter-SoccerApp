@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:soccerapp/ui/screens/statistics/assits_screen.dart';
 import 'package:soccerapp/ui/screens/statistics/goal_screen.dart';
-import 'package:soccerapp/ui/screens/statistics/rcard_screen.dart';
-import 'package:soccerapp/ui/screens/statistics/ycard_screen.dart';
 
 class StatisticsScreen extends StatelessWidget {
   const StatisticsScreen({super.key});
@@ -35,8 +33,8 @@ class StatisticsScreen extends StatelessWidget {
           children: <Widget>[
             GoalScreen(),
             AssitsScreen(),
-            YcardScreen(),
-            RcardScreen(),
+            GoalScreen(),
+            AssitsScreen(),
           ],
         ),
       )),

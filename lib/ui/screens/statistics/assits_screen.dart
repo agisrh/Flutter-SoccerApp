@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
-import 'package:soccerapp/core/controllers/assist_controller.dart';
-import 'package:soccerapp/core/models/data/asist_data.dart';
+import 'package:soccerapp/core/data/dummy_data.dart';
+import 'package:soccerapp/core/models/export_helper.dart';
 import 'package:soccerapp/ui/theme/app_theme.dart';
 
 class AssitsScreen extends StatelessWidget {
@@ -10,96 +9,78 @@ class AssitsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetBuilder<AssistController>(
-      init: Get.put(AssistController()),
-      builder: (controller) {
-        return Container(
-          margin: EdgeInsets.only(top: 10.h),
-          child: Obx(
-            () => controller.isLoading.value
-                ? const Center(child: CircularProgressIndicator())
-                : ListView.builder(
-                    physics: const BouncingScrollPhysics(),
-                    padding: EdgeInsets.symmetric(horizontal: 10.w),
-                    itemCount: controller.datalist.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      AssistData goal = controller.datalist[index];
-                      return Column(
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Row(
-                                children: [
-                                  Text((index + 1).toString()),
-                                  Container(
-                                    padding:
-                                        EdgeInsets.symmetric(horizontal: 15.w),
-                                    child: goal.avatar.isNotEmpty
-                                        ? ClipRRect(
-                                            borderRadius:
-                                                BorderRadius.circular(100),
-                                            child: Image.network(
-                                              goal.avatar,
-                                              height: 40,
-                                              width: 40,
-                                            ),
-                                          )
-                                        : CircleAvatar(
-                                            backgroundColor:
-                                                AppTheme.color.neutral.shade400,
-                                            child: const Icon(Iconsax.user),
-                                          ),
-                                  ),
-                                  Column(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
-                                    children: [
-                                      Text(goal.name),
-                                      SizedBox(height: 5.h),
-                                      Row(
-                                        children: [
-                                          Image.network(
-                                            goal.clubLogo,
-                                            height: 20,
-                                          ),
-                                          SizedBox(width: 5.w),
-                                          // Text(
-                                          //   goal.clubl,
-                                          //   style: TextStyle(
-                                          //     fontSize: 12.sp,
-                                          //     color: AppTheme
-                                          //         .color.neutral.shade600,
-                                          //   ),
-                                          // )
-                                        ],
-                                      )
-                                    ],
-                                  ),
-                                ],
+    return Container(
+      margin: EdgeInsets.only(top: 10.h),
+      child: ListView.builder(
+        physics: const BouncingScrollPhysics(),
+        padding: EdgeInsets.symmetric(horizontal: 10.w),
+        itemCount: assits().length,
+        itemBuilder: (BuildContext context, int index) {
+          StatsData goal = assits()[index];
+          return Column(
+            children: [
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Text((index + 1).toString()),
+                      Container(
+                        padding: EdgeInsets.symmetric(horizontal: 15.w),
+                        child: goal.photo != null
+                            ? CircleAvatar(
+                                backgroundImage: AssetImage(goal.photo!),
+                              )
+                            : CircleAvatar(
+                                backgroundColor:
+                                    AppTheme.color.neutral.shade400,
+                                child: const Icon(Iconsax.user),
                               ),
-                              Padding(
-                                padding: const EdgeInsets.only(right: 15.0),
-                                child: Text(
-                                  goal.total,
-                                  style: TextStyle(
-                                    fontSize: 14.sp,
-                                    color: AppTheme.color.primary,
-                                    fontWeight: FontWeight.bold,
-                                  ),
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(goal.name),
+                          SizedBox(height: 5.h),
+                          Row(
+                            children: [
+                              Image.asset(
+                                goal.clubLogo,
+                                height: 20,
+                              ),
+                              SizedBox(width: 5.w),
+                              Text(
+                                goal.club,
+                                style: TextStyle(
+                                  fontSize: 12.sp,
+                                  color: AppTheme.color.neutral.shade600,
                                 ),
                               )
                             ],
-                          ),
-                          const Divider(thickness: 1),
+                          )
                         ],
-                      );
-                    },
+                      ),
+                    ],
                   ),
-          ),
-        );
-      },
+                  Padding(
+                    padding: const EdgeInsets.only(right: 15.0),
+                    child: Text(
+                      '${goal.point}',
+                      style: TextStyle(
+                        fontSize: 14.sp,
+                        color: AppTheme.color.primary,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  )
+                ],
+              ),
+              const Divider(thickness: 1),
+            ],
+          );
+        },
+      ),
     );
   }
 }

@@ -1,4 +1,3 @@
-import 'package:soccerapp/core/models/data/news_data.dart';
 import 'package:soccerapp/core/models/export_helper.dart';
 
 List<GameData> games() {
@@ -43,21 +42,21 @@ List<HightlightData> highlights() {
       teamA: 'Persib Bandung',
       teamB: 'Persija Jakarta',
       thumbnail:
-          'https://mookaps.com/bola/images/Highlight-Persib-Vs-PSIS-Hasil-Liga-1-Hari-Ini-Drama-Gol-David-da-Silva-dan-Alfeandra-Dewangga.jpg',
+          'https://cdn-2.tstatic.net/pontianak/foto/bank/images/Highlight-Persib-Vs-PSIS-Hasil-Liga-1-Hari-Ini-Drama-Gol-David-da-Silva-dan-Alfeandra-Dewangga.jpg',
     ),
     HightlightData(
       date: '27 Januari 2023',
       teamA: 'Persib Bandung',
       teamB: 'Persija Jakarta',
       thumbnail:
-          'https://mookaps.com/bola/images/Highlight-Persib-Vs-PSIS-Hasil-Liga-1-Hari-Ini-Drama-Gol-David-da-Silva-dan-Alfeandra-Dewangga.jpg',
+          'https://cdn-2.tstatic.net/pontianak/foto/bank/images/Highlight-Persib-Vs-PSIS-Hasil-Liga-1-Hari-Ini-Drama-Gol-David-da-Silva-dan-Alfeandra-Dewangga.jpg',
     ),
     HightlightData(
       date: '27 Januari 2023',
       teamA: 'Persib Bandung',
       teamB: 'Persija Jakarta',
       thumbnail:
-          'https://mookaps.com/bola/images/Highlight-Persib-Vs-PSIS-Hasil-Liga-1-Hari-Ini-Drama-Gol-David-da-Silva-dan-Alfeandra-Dewangga.jpg',
+          'https://cdn-2.tstatic.net/pontianak/foto/bank/images/Highlight-Persib-Vs-PSIS-Hasil-Liga-1-Hari-Ini-Drama-Gol-David-da-Silva-dan-Alfeandra-Dewangga.jpg',
     ),
   ];
 }
@@ -408,75 +407,6 @@ List<StatsData> assits() {
       club: 'PSM',
       point: 6,
       clubLogo: 'assets/images/psm.png',
-    ),
-  ];
-}
-
-List<NewsData> news() {
-  return [
-    NewsData(
-      title:
-          "Klub Sudah Berkorban BRI Liga 1 Ditunda, Rugi Kalau Timnas Indonesia U-23 Gagal Total di Piala Asia U-23 2024",
-      thumbnail:
-          "https://cdns.klimg.com/bola.net/library/upload/21/2024/03/175/indo-7_360652c.jpg",
-      url:
-          "https://www.bola.net/tim_nasional/klub-sudah-berkorban-bri-liga-1-ditunda-rugi-kalau-timnas-indonesia-u-23-gagal-total-di-piala-bdd116.html",
-    ),
-    NewsData(
-      title:
-          "Media Vietnam Komentari Penundaan BRI Liga 1 Demi Timnas Indonesia U-23: Di Sini Juga Begitu Kok!",
-      thumbnail:
-          "https://cdns.klimg.com/bola.net/library/upload/21/2023/12/175/persija-pss_c042c04.jpg",
-      url:
-          "https://www.bola.net/tim_nasional/media-vietnam-komentari-penundaan-bri-liga-1-demi-timnas-indonesia-u-23-di-sini-juga-begitu-k-e224d2.html",
-    ),
-    NewsData(
-      title:
-          "Persija Dihukum Transfer FIFA karena Belum Selesaikan Kewajiban saat Mendatangkan Pemain di Awal Musim BRI Liga 1",
-      thumbnail:
-          "https://cdns.klimg.com/bola.net/library/upload/21/2023/12/175/persija-maskot_f69e8b2.jpg",
-      url:
-          "https://www.bola.net/indonesia/persija-dihukum-transfer-fifa-karena-belum-selesaikan-kewajiban-saat-mendatangkan-pemain-di-a-ff99df.html",
-    ),
-    NewsData(
-      title:
-          "APPI Duga Persija Dibanned Transfer FIFA Bukan karena Kasus Marko Simic, Jadi Apa Dong?",
-      thumbnail:
-          "https://cdns.klimg.com/bola.net/library/upload/21/2021/12/175/20211125bl_persija-j_f9033dd.jpg",
-      url:
-          "https://www.bola.net/indonesia/appi-duga-persija-dibanned-transfer-fifa-bukan-karena-kasus-marko-simic-jadi-apa-dong-aa7388.html",
-    ),
-    NewsData(
-      title:
-          "SOS Sebut Championship Series di BRI Liga 1 2023/2024 Biang Pemborosan",
-      thumbnail:
-          "https://cdns.klimg.com/bola.net/library/upload/21/2023/07/175/bri-liga-1-white-2_b851bce.jpg",
-      url:
-          "https://www.bola.net/indonesia/sos-sebut-championship-series-di-bri-liga-1-2023-2024-biang-pemborosan-faa60f.html",
-    ),
-    NewsData(
-      title:
-          "Jadwal Kompetisi BRI Liga 1 2023/2024 Ditunda, SOS: Preseden Buruk Sepak Bola Indonesia",
-      thumbnail:
-          "https://cdns.klimg.com/bola.net/library/upload/21/2023/03/175/akmal_75a7d03.jpg",
-      url:
-          "https://www.bola.net/indonesia/jadwal-kompetisi-bri-liga-1-2023-2024-ditunda-sos-preseden-buruk-sepak-bola-indonesia-e8d331.html",
-    ),
-    NewsData(
-      title:
-          "Nasib Buruk Beckham Putra: 2 Kali Absen Bela Timnas Indonesia U-23 di Level Asia",
-      thumbnail:
-          "https://cdns.klimg.com/bola.net/library/upload/21/2023/05/175/20230510aa_sea-games_4b093c6.jpg",
-      url:
-          "https://www.bola.net/tim_nasional/nasib-buruk-beckham-putra-2-kali-absen-bela-timnas-indonesia-u-23-di-level-asia-227fab.html",
-    ),
-    NewsData(
-      title:
-          "Flavio 'Ucok' Silva Mengejar David da Silva di Puncak Daftar Top Skor BRI Liga 1",
-      thumbnail:
-          "https://cdns.klimg.com/bola.net/library/upload/21/2024/04/175/flavio-silva_049566b.jpg",
-      url:
-          "https://www.bola.net/indonesia/flavio-ucok-silva-mengejar-david-da-silva-di-puncak-daftar-top-skor-bri-liga-1-367ab7.html",
     ),
   ];
 }
