@@ -6,6 +6,7 @@ class SchData {
   String awayClub;
   String awayClubLogo;
   String venue;
+  String score;
 
   SchData({
     required this.date,
@@ -15,6 +16,7 @@ class SchData {
     required this.awayClub,
     required this.awayClubLogo,
     required this.venue,
+    required this.score,
   });
 
   static SchData fromJson(Map<String, dynamic> json) {
@@ -26,6 +28,7 @@ class SchData {
       awayClub: json["away_club"].toString(),
       awayClubLogo: json["away_club_logo"].toString(),
       venue: json["venue"].toString(),
+      score: json["score"].toString(),
     );
   }
 

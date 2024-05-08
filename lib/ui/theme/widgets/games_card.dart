@@ -52,7 +52,7 @@ class GameCard extends StatelessWidget {
                         ),
                         SizedBox(height: 3.h),
                         Text(
-                          'KICK OFF ${game.time}',
+                          game.time == 'FT' ? 'Score ${game.score}' : game.time,
                           style: TextStyle(
                             fontSize: 10.sp,
                             color: AppTheme.color.neutral.shade600,

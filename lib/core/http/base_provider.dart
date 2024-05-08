@@ -17,7 +17,7 @@ class BaseProvider extends ChangeNotifier {
 
   Future<dynamic> nextmatch() async {
     _dio.options.headers.addAll(await getHeaders());
-    var response = await _dio.get('$_serverUrl/nextmatch');
+    var response = await _dio.get('$_serverUrl/matchday');
     if (response.statusCode == 200) {
       final result = response.data;
       resp = result;

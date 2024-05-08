@@ -26,6 +26,7 @@ class HomeController extends GetxController {
   Future<void> getNextMatch() async {
     final base = BaseProvider();
     base.nextmatch().then((value) {
+      print(value['data']);
       List<SchData> datas = SchData.fromJsonList(value['data']);
       for (var i = 0; i < datas.length; i++) {
         SchData dt = datas[i];

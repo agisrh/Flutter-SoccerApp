@@ -48,6 +48,6 @@
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>NSUserTrackingUsageDescription</key>
-	<string>This identifier will be used to deliver personalized ads to you.</string>
+	<string>Please allow so we can serve you personalized ads.</string>
 </dict>
 </plist>
